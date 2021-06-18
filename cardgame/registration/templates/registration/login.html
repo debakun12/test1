@@ -1,0 +1,16 @@
+{% extends "registration/base.html"%}
+
+{% block title %}
+Login Here
+{% endblock %}
+
+
+{% block content %}
+<form method="POST" class="from-group">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit" class="btn btn-success">Login</button>
+    <p>Dont have an account? Sign up <a href="registration/register.html">here</a></p>
+</form>
+{% endblock %}
+
